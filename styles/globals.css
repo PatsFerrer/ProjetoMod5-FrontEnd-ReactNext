@@ -1,107 +1,138 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
+@charset "UTF-8";
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html,
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(49 46 129);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(30 27 75);
+}
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+    position: relative;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.navbar-brand img {   
+    width: 55px;
+    filter: invert(1)
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.navbar-collapse {
+    justify-content: end;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+#navbarNav > ul > .nav-item .nav-link:hover {
+    border-right: 1px solid rgba(255, 255, 255, 0.658);
+    border-left: 1px solid rgba(255, 255, 255, 0.658);
+    background-color: #10004f31 ; 
+    color: white;
+}
+
+#navbarNav > ul > .nav-item .nav-link:last-child {
+    border-left: 0;
+}
+
+div ul li a {
+    font-size: 16px;
+}
+
+nav.navbar-expand-md {
+    background-color: rgb(49 46 129);
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: rgba(255, 255, 255, 0.685);
+}
+
+.nav-link {
+    color: white;
+}
+
+.carousel-caption > h5, .carousel-caption p {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.678);
+}
+
+.carousel-item > img, .capinha {
+	height: 400px;
+	object-fit: cover;
+}
+
+.btn-primary {
+    background-color: rgb(49 46 129);
+    border: rgb(49 46 129);
+}
+
+.btn-primary:hover{
+    background-color: rgb(30 27 75);
+}
+
+.btn-primary:active {
+    background-color: rgb(30 27 75) !important;
+}
+
+.btn-danger {
+	background-color: rgb(116, 10, 10);
+	border: none;
+}
+
+footer {
+    background-color: rgb(49 46 129);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    align-items: center;
+}
+
+footer > .compra-segura {
+    display: flex;
+    flex-direction: column;
+}
+
+.compra-segura > a {
+    text-decoration: none;
+    color: white;
+}
+
+footer > .contato {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > .redes-sociais {
+    display: flex;
+    flex-direction: column; 
+}
+
+footer > img {
+    width: 150px;
+    filter: invert(1)
+}
+
+span > a > i {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+span > a {
+    text-decoration: none;
+}
+
+.mensagem-sucesso {
+   background-color: rgb(0, 74, 0);  
+    color: white; 
+    padding: 10px; 
+    border: 1px solid #4CAF50; 
+    text-align: center; 
+    margin: 10px;
 }

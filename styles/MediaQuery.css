@@ -1,0 +1,31 @@
+@media screen and (max-width: 600px) {
+  footer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  footer .compra-segura {
+    text-align: end;
+  }
+
+  .carousel-item > img, .capinha {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .carousel-item > img, .capinha {
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-item > img, .capinha {
+    height: 400px;
+    object-fit: cover;
+  }
+}
