@@ -16,7 +16,6 @@ export const useReserva = () => {
     useEffect(() => {
         reserva.cliente = cliente
         reserva.destino = destino
-        console.log(reserva)
     }, [cliente, destino])
 
     const handleInputChange = (e) => {
@@ -58,10 +57,13 @@ export const useReserva = () => {
             .get(`${URL}/${codigo}`)
             .then((response) => {
                 setReserva(response.data);
+               setCliente(response.data.cliente)
+               setDestino(response.data.destino)
+                
             })
             .catch((error) => {
                 console.error("Erro ao buscar detalhes da reserva: ", error);
-            });
+            })
     }
 
     const atualizarReserva = () => {
@@ -90,6 +92,7 @@ export const useReserva = () => {
       return {
         cliente,
         handleInputChangeCliente,
+        destino,
         handleInputChangeDestino,
 
         reserva,

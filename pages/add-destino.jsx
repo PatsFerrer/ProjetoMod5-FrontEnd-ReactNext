@@ -4,6 +4,7 @@ import Head from 'next/head'
 const AddDestino = () => {
 
   const { destino, handleInputChange, criarDestino } = useDestino()
+  
 
   return (
     <>
@@ -30,26 +31,27 @@ const AddDestino = () => {
         <h1>Cadastrar Destino</h1>
         <div className="row">
           <div className="col-md col-lg">
+
             <div className="row g-3">
               <div className="col-sm-6">
-                <label for="nome" className="form-label">Nome</label>
+                <label htmlFor="nome" className="form-label">Nome</label>
                 <input type="text" className="form-control" id="nome" value={destino.nome} onChange={handleInputChange} name="nome" />
 
               </div>
               <div className="col-sm-6">
 
-                <label for="imagem" className="form-label">URL Imagem</label>
+                <label htmlFor="imagem" className="form-label">URL Imagem</label>
                 <input type="text" className="form-control" id="email" name="imagem" value={destino.imagem} onChange={handleInputChange} required />
 
               </div>
 
               <div className="col-sm-6">
-                <label for="descricao" className="form-label">Descrição</label>
+                <label htmlFor="descricao" className="form-label">Descrição</label>
                 <input type="text" className="form-control" id="cpf" name="descricao" value={destino.descricao} onChange={handleInputChange} required />
               </div>
 
               <div className="col-sm-6">
-                <label for="valor" className="form-label">Valor</label>
+                <label htmlFor="valor" className="form-label">Valor</label>
                 <input type="text" className="form-control" id="valor" name="valor" value={destino.valor} onChange={handleInputChange} required />
               </div>
 
@@ -61,6 +63,8 @@ const AddDestino = () => {
                 Inserir Destino
               </button>
             </div>
+
+            
           </div>
         </div>
 

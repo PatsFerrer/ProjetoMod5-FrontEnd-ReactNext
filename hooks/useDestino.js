@@ -6,7 +6,7 @@ export const useDestino = () => {
 
     const router = useRouter();
     const URL = "http://localhost:8080/destinos"
-    const [destino, setDestino] = useState({ id: 0, nome: "", valor: "", descricao: "", imagem: "" });
+    const [destino, setDestino] = useState({ id: 0, nome: null, valor: null, descricao: null, imagem: null });
     const [destinos, setDestinos] = useState([]);
 
     const handleInputChange = (e) => {

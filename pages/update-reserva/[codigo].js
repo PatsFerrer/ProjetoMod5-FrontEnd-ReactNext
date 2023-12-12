@@ -12,7 +12,7 @@ const UpdateReserva = () => {
     const router = useRouter();
 
     const { codigo } = router.query;
-    const { reserva, handleInputChange, handleInputChangeCliente, handleInputChangeDestino, buscarReserva, atualizarReserva } = useReserva()
+    const { reserva, handleInputChange, handleInputChangeCliente, handleInputChangeDestino, buscarReserva, atualizarReserva, cliente, destino } = useReserva()
     const { clients, listarClientes } = useCliente()
     const { destinos, listarDestinos } = useDestino()
 
@@ -22,6 +22,11 @@ const UpdateReserva = () => {
         listarClientes()
         listarDestinos()
     }, [])
+    
+    useEffect(() => {
+        console.log(cliente)
+        console.log(destino)
+    }, [reserva])
 
     return (
 
@@ -69,6 +74,9 @@ const UpdateReserva = () => {
                                 required
                                 onChange={handleInputChangeCliente}
                             >
+                                    <option key={cliente.id} value={cliente.id}>
+                                        {cliente.nome}
+                                    </option>
                                 {clients.map(({ id, nome }) => (
                                     <option key={id} value={id}>
                                         {nome}
@@ -83,9 +91,13 @@ const UpdateReserva = () => {
                                 className="form-control"
                                 id="destino"
                                 name="destino"
+                                
                                 required
                                 onChange={handleInputChangeDestino}
                             >
+                                    <option key={destino.id} value={destino.id}>
+                                        {destino.nome}
+                                    </option>
                                 {destinos.map(({ id, nome }) => (
                                     <option key={id} value={id}>
                                         {nome}

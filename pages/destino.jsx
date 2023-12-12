@@ -56,7 +56,6 @@ const Destino = () => {
                     </div>
                 </div>
 
-
                 <div className="row">
                     <div className="col-sm-12 overflow-x-auto">
 
