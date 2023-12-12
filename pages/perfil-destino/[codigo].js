@@ -55,7 +55,7 @@ const UpdateDestino = () => {
      
         <section className="container p-2 card mt-3 mb-3">
 
-          <h1 className="text-center">Conheça {destino.nome}!</h1>
+          <h1 className="display-4 font-weight-normal text-center">Conheça {destino.nome}!</h1>
 
           <div className="row g-2">
 
