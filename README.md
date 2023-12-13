@@ -2,7 +2,7 @@
 
 Este é um projeto React com Next.js para consumir a API Java de uma agência de viagens.
 
-- Primeiro, baixe e execute a [API Java](https://github.com/PatsFerrer/ProjetoMod5-BackEnd-API).
+- Primeiro, baixe e execute a [API C#](#).
 ## Iniciando
 - Instale 
 ```bash
